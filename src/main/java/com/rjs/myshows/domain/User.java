@@ -25,6 +25,5 @@ public interface User extends BaseElement {
 	void setDateOfBirth(LocalDate dateOfBirth);
 
 	Set<Role> getRoles();
-	void grantRole(Role role);
-	void revokeRole(Role role);
+	void setRoles(Set<Role> roles);
 }
