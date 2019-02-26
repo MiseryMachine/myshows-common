@@ -12,4 +12,11 @@ public interface ShowType {
 	void addGenre(String genre);
 	void removeGenre(String genre);
 	boolean hasGenre(String genre);
+
+	Set<String> getRatings();
+	void setRatings(Set<String> ratings);
+
+	void addRating(String rating);
+	void removeRating(String rating);
+	boolean hasRating(String rating);
 }

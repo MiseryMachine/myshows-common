@@ -16,6 +16,8 @@ public class ShowTypeDto extends BaseDto implements ShowType {
 	private String name;
 	@JsonDeserialize(as = HashSet.class)
 	private Set<String> genres = new HashSet<>();
+	@JsonDeserialize(as = HashSet.class)
+	private Set<String> ratings = new HashSet<>();
 
 	public ShowTypeDto() {
 	}
@@ -33,5 +35,20 @@ public class ShowTypeDto extends BaseDto implements ShowType {
 	@Override
 	public boolean hasGenre(String genre) {
 		return genres.contains(genre);
+	}
+
+	@Override
+	public void addRating(String rating) {
+		ratings.add(rating);
+	}
+
+	@Override
+	public void removeRating(String rating) {
+		ratings.remove(rating);
+	}
+
+	@Override
+	public boolean hasRating(String rating) {
+		return ratings.contains(rating);
 	}
 }
