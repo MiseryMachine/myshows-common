@@ -5,7 +5,7 @@ import java.util.Set;
 
 import com.rjs.myshows.domain.security.Role;
 
-public interface User extends BaseElement {
+public interface User {
 	String getUsername();
 	void setUsername(String username);
 

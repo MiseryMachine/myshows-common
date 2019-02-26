@@ -4,24 +4,24 @@ import java.util.Objects;
 
 import com.rjs.myshows.domain.BaseElement;
 
-public abstract class BaseDto implements BaseElement {
-	protected String id;
+public abstract class BaseDto implements BaseElement<Long> {
+	protected Long id;
 
 	protected BaseDto() {
 	}
 
 	@Override
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
 	@Override
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
 	public String getUniqueName() {
-		return String.format("%s:%s", getClass().getName(), id);
+		return String.format("%s:%d", getClass().getName(), id);
 	}
 
 	@Override

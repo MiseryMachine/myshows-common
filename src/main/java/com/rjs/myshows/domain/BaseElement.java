@@ -1,6 +1,8 @@
 package com.rjs.myshows.domain;
 
-public interface BaseElement {
-	String getId();
-	void setId(String id);
+import java.io.Serializable;
+
+public interface BaseElement<E extends Serializable> {
+	E getId();
+	void setId(E id);
 }

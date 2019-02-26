@@ -1,9 +1,9 @@
 package com.rjs.myshows.domain;
 
 import java.time.LocalDate;
-import java.util.HashSet;
+import java.util.Set;
 
-public interface Show extends BaseElement {
+public interface Show {
 	String getMdbId();
 	void setMdbId(String mdbId);
 
@@ -16,8 +16,8 @@ public interface Show extends BaseElement {
 	String getShowRating();
 	void setShowRating(String showRating);
 
-	HashSet<String> getContents();
-	void setContents(HashSet<String> contents);
+	Set<String> getContents();
+	void setContents(Set<String> contents);
 
 	String getTagLine();
 	void setTagLine(String tagLine);
@@ -37,8 +37,8 @@ public interface Show extends BaseElement {
 	String getShowType();
 	void setShowType(String showType);
 
-	HashSet<String> getGenres();
-	void setGenres(HashSet<String> genres);
+	Set<String> getGenres();
+	void setGenres(Set<String> genres);
 
 	String getMediaFormat();
 	void setMediaFormat(String mediaFormat);

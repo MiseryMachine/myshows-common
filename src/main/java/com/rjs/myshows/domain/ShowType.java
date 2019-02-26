@@ -2,7 +2,7 @@ package com.rjs.myshows.domain;
 
 import java.util.Set;
 
-public interface ShowType extends BaseElement {
+public interface ShowType {
 	String getName();
 	void setName(String name);
 
